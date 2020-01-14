@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Data</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="../static/img/mdb-favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="../static/css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- MDBootstrap Datatables  -->
+    <link href="../static/css/addons/datatables.min.css" rel="stylesheet">
+</head>
+
+<body>
+    {% block content %}
+    <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th class="th-sm">Date
+                </th>
+                <th class="th-sm">Ipaddress
+                </th>
+                <th class="th-sm">City
+                </th>
+                <th class="th-sm">Post
+                </th>
+                <th class="th-sm">location
+                </th>
+                <th class="th-sm">hostname
+                </th>
+                <th class="th-sm">upload
+                </th>
+                <th class="th-sm">Dawnload
+                </th>
+                <th class="th-sm">ping
+                </th>
+                <th class="th-sm">Organisation
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for data in data%}
+            <tr>
+                <td>{{data.date}}</td>
+                <td>{{data.IpAddress}}</td>
+                <td>{{data.city}}</td>
+                <td>{{data.post}}</td>
+                <td>{{data.location}}</td>
+                <td>{{data.hostname}}</td>
+                <td>{{data.upload}}</td>
+                <td>{{data.download}}</td>
+                <td>{{data.ping}}</td>
+                <td>{{data.organisation}}</td>
+
+            </tr>
+            {%endfor%}
+
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th class="th-sm">Date
+                </th>
+                <th class="th-sm">Ipaddress
+                </th>
+                <th class="th-sm">City
+                </th>
+                <th class="th-sm">Post
+                </th>
+                <th class="th-sm">location
+                </th>
+                <th class="th-sm">hostname
+                </th>
+                <th class="th-sm">upload
+                </th>
+                <th class="th-sm">Dawnload
+                </th>
+                <th class="th-sm">ping
+                </th>
+                <th class="th-sm">Organisation
+            </tr>
+        </tfoot>
+    </table>
+    {% endblock %}
+
+    <!-- End your project here-->
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../static/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../static/js/mdb.min.js"></script>
+    <!-- MDBootstrap Datatables  -->
+    <script type="text/javascript" src="../static/js/addons/datatables.min.js"></script>
+    <!-- Your custom scripts (optional) -->
+    <script>
+        $(document).ready(function() {
+            $('#dtBasicExample').DataTable();
+            $('.dataTables_length').addClass('bs-select');
+        });
+    </script>
+
+</body>
+
+</html>

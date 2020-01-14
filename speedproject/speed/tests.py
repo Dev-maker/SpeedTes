@@ -27,7 +27,7 @@ db = firestore.client()
 
 
 def location(request):
-    response_string = 'o'.format(
+    response_string = '{0}'.format(
         request.ipinfo.all
 
     )

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.gis',
     'speed',
+    
 
 
 ]
@@ -117,11 +118,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
+STATIC_ROOT = 'speedproject/speed/static/'
 STATIC_URL = '/static/'
 STATIC_FILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    "speedproject/speed/static",
+    'speedproject/speed/static/',
 ]
 IPINFO_TOKEN = '12c6680c921bbb'
 # IPINFO_SETTINGS = {
