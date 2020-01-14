@@ -31,14 +31,4 @@ activate it
 make migrations and run the server     
     
         
-=======
-install vagrant 
-run the following commandes 
-vagrant up
-Connect to Vagrant box
-vagrant ssh
-enter to vagrant server 
-cd /vagrant
-install requrments 
-pip3 install -r reaquirements.txt 
-run the django server 
+do not forget to change  the  ipinfo token from setting in order to get data
