@@ -1,5 +1,5 @@
-# Created by https://www.gitignore.io/api/python
-# Edit at https://www.gitignore.io/?templates=python,django
+# Created by https://www.gitignore.io/api/python,vagrant
+# Edit at https://www.gitignore.io/?templates=python,vagrant
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -62,7 +62,6 @@ coverage.xml
 *.log
 local_settings.py
 db.sqlite3
-firebase
 
 # Flask stuff:
 instance/
